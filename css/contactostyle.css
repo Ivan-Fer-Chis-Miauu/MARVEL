@@ -1,0 +1,235 @@
+
+    /* Estilos generales */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #0f0f0f;
+      color: #ffffff;
+      line-height: 1.6;
+      
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      z-index: -1;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, rgba(229, 9, 20, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%);
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      position: relative;
+      display: inline-block;
+    }
+
+    header h1::after {
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      background: #ffcc00;
+      border-radius: 2px;
+    }
+
+    /* Sección del creador */
+    .creador {
+      max-width: 800px;
+      margin: 0 auto 50px;
+      background: rgba(31, 31, 31, 0.9);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(229, 9, 20, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+      text-align: center;
+      border: 1px solid #333;
+      transition: transform 0.3s ease;
+    }
+
+    .creador:hover {
+      transform: translateY(-5px);
+    }
+
+    .creador img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #e50914;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .creador h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #ffcc00;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .creador p {
+      font-size: 1.1rem;
+      color: #ddd;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    /* Botones de redes sociales */
+    .social-buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .social-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .facebook { background-color: #3b5998; }
+    .twitter { background-color: #1da1f2; }
+    .instagram { 
+      background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    }
+    .youtube { background-color: #ff0000; }
+
+    /* Sección de agradecimiento */
+    .agradecimiento {
+      max-width: 800px;
+      margin: 0 auto 50px;
+      padding: 30px;
+      background: rgba(31, 31, 31, 0.9);
+      border-radius: 15px;
+      text-align: center;
+      border: 1px solid #333;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .agradecimiento::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, #e50914, #ffcc00, #e50914);
+    }
+
+    .agradecimiento p {
+      font-size: 1.2rem;
+      color: #fff;
+      line-height: 1.8;
+    }
+
+    /* Botón de inicio */
+    .btn-inicio {
+      display: inline-block;
+      padding: 12px 30px;
+      background: linear-gradient(45deg, #e50914, #b2070f);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 30px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(229, 9, 20, 0.4);
+    }
+
+    .btn-inicio:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(229, 9, 20, 0.6);
+      background: linear-gradient(45deg, #b2070f, #e50914);
+    }
+
+    .btn-inicio i {
+      margin-right: 8px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: linear-gradient(135deg, rgba(31, 31, 31, 0.9) 0%, rgba(0, 0, 0, 0.95) 100%);
+      margin-top: 50px;
+      border-top: 1px solid #333;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      .creador, .agradecimiento {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 20px;
+      }
+
+      .creador img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .social-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }

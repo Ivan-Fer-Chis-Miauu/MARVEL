@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos Marvel</title>
+    <link rel="stylesheet" href="css/compras.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TIENDA MARVEL</h1>
+        <h1 class="subtitulo">PELICULAS DE MARVEL</h1>
+        
+        <div class="productos">
+            <div class="productos-grid">
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="wanda.jpeg" alt="WandaVision">
+                    </div>
+                    <div class="producto-info">
+                        <h3>WANDAVISION</h3>
+                        <p class="precio">45 Bs</p>
+                        <button onclick="agregarProducto('WandaVision', 45)" class="btn-agregar">Alquilar Pelicula</button>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="loki.jpeg" alt="Loki">
+                    </div>
+                    <div class="producto-info">
+                        <h3>LOKI</h3>
+                        <p class="precio">50 Bs</p>
+                        <button onclick="agregarProducto('Loki', 50)" class="btn-agregar">Alquilar Pelicula</button>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="THE FALCON AND THE WINTER SOLDIER (2021).jpeg" alt="Falcon y Winter Soldier">
+                    </div>
+                    <div class="producto-info">
+                        <h3>FALCON Y WINTER SOLDIER</h3>
+                        <p class="precio">70 Bs</p>
+                        <button onclick="agregarProducto('Falcon y Winter Soldier', 70)" class="btn-agregar">Alquilar Pelicula</button>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="IronMan(2008).jpeg" alt="Iron Man">
+                    </div>
+                    <div class="producto-info">
+                        <h3>IRON MAN</h3>
+                        <p class="precio">64 Bs</p>
+                        <button onclick="agregarProducto('Iron Man', 64)" class="btn-agregar">Alquilar Pelicula</button>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="thor.jpg" alt="Thor">
+                    </div>
+                    <div class="producto-info">
+                        <h3>THOR</h3>
+                        <p class="precio">40 Bs</p>
+                        <button onclick="agregarProducto('Thor', 40)" class="btn-agregar">Alquilar Pelicula</button>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="marvels-spider-man-3840x2160-11609.jpeg" alt="Spider-Man">
+                    </div>
+                    <div class="producto-info">
+                        <h3>SPIDER-MAN</h3>
+                        <p class="precio">80 Bs</p>
+                        <button onclick="agregarProducto('Spider-Man', 80)" class="btn-agregar">Alquilar Pelicula</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+     
+        <div class="carrito">
+            <h2>Carrito de Compras</h2>
+            <div class="info-carrito">
+                <p>Productos: <span id="cantidadProductos">0</span></p>
+                <p>Total: <span id="totalCarrito">0 Bs</span></p>
+            </div>
+            
+            <div class="lista-carrito">
+                <h3>Lista de Productos:</h3>
+                <div id="listaProductos">El carrito está vacío</div>
+            </div>
+            
+            <div class="acciones-carrito">
+                <button onclick="vaciarCarrito()" class="vaciar">Vaciar Carrito</button>
+                <button onclick="eliminarUltimoProducto()" class="eliminar">Eliminar Último</button>
+                <button onclick="mostrarLogin()" class="comprar">Comprar</button>
+            </div>
+        </div>
+
+        <div id="modalLogin" class="modal">
+            <div class="modal-contenido">
+                <h2>Iniciar Sesión</h2>
+                <input type="text" id="usuario" >
+                <input type="password" id="contraseña">
+                <div class="modal-botones">
+                    <button onclick="procesarCompra()" class="btn-confirmar">Confirmar Compra</button>
+                    <button onclick="cerrarLogin()" class="btn-cancelar">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="index.html" class="btn-inicio"><i class="fas fa-home"></i> Ir a Página Principal</a>
+    <script src="js/compras.js"></script>
+</body>
+</html>
